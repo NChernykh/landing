@@ -1,0 +1,52 @@
+.automation {
+
+  &__wrapper {
+    padding: 100px 88px;
+
+    @include vp-1023 {
+      padding: 60px 30px;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    margin-right: 50px;
+
+    .text {
+      margin-bottom: 32px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    background-color: $color-default-white;
+    max-width: 300px;
+    padding: 20px 16px;
+    margin-bottom: 23px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px -3px $color-san-juan;
+
+    svg {
+      width: 33px;
+      height: 33px;
+      margin-right: 17px;
+    }
+  }
+
+  &__button:last-child {
+    margin-bottom: 0;
+  }
+
+  &__button-text {
+    text-align: left;
+    font-weight: 500;
+
+    span {
+      display: inline-block;
+    }
+  }
+}

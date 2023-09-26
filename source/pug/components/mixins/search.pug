@@ -1,0 +1,11 @@
+mixin search()
+  .search
+    form.form(id="form-search", action="", method="GET")
+      +custom-input({
+        inputType: 'search',
+        inputName: 'search',
+        inputPlaceholder: 'Ask your question here......'
+      })
+      +btn({
+        text: 'Search'
+      }).btn--colored

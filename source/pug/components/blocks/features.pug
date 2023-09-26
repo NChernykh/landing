@@ -1,0 +1,28 @@
+mixin features(data)
+  -
+    const featuresData = [
+      {
+        icon: 'icon-bulb',
+        title: 'Friendly Interface',
+        text: 'Feugiat primis ultrice a semper lacus cursus feugiat a primis ultrice a ligula risus auctor '
+      },
+      {
+        icon: 'icon-bulb',
+        title: 'Extremely Flexible',
+        text: 'Feugiat primis ultrice a semper lacus cursus feugiat a primis ultrice a ligula risus auctor '
+      },
+      {
+        icon: 'icon-bulb',
+        title: 'Strong Encryption',
+        text: 'Feugiat primis ultrice a semper lacus cursus feugiat a primis ultrice a ligula risus auctor '
+      },
+    ];
+
+  section.features.section(class!=attributes.class)
+    .container
+      h2.title.title--main We&rsquo;re Better. Here&rsquo;s Why...
+      p.text.text--main Aliquam a&nbsp;augue suscipit, luctus neque purus ipsum neque dolor primis a&nbsp;libero tempus, blandit and cursus varius and magnis sapien
+      ul.features__list.flex
+        each item in featuresData
+          li.features__item
+            +card(item)

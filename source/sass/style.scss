@@ -10,7 +10,6 @@
 
 @import "variables";
 @import "mixins";
-@import "functions";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -24,10 +23,31 @@
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/btn";
+@import "blocks/title";
+@import "blocks/text";
+@import "blocks/form";
 @import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
-@import "blocks/input-upload";
+@import "blocks/intro";
+@import "blocks/about";
+@import "blocks/card";
+@import "blocks/share";
+@import "blocks/chatting";
+@import "blocks/security";
+@import "blocks/automation";
+@import "blocks/pricing";
+@import "blocks/features";
+@import "blocks/favourite";
+@import "blocks/moments";
+@import "blocks/stories";
+@import "blocks/get-app";
+@import "blocks/users";
+@import "blocks/faq";
+@import "blocks/offer";
+@import "blocks/search";
+@import "blocks/addition";
+@import "blocks/app-btns";
+@import "blocks/social";
+
 
 // ---------------------------------
 

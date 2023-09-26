@@ -1,0 +1,29 @@
+.faq {
+
+  .title {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 16px;
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    width: 44%;
+    margin-bottom: 18px;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    .text:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+mixin offer(data)
+  section.offer.section(class!=attributes.class)
+    .container
+      .offer__wrapper.flex.card
+        .offer__img.flex__img
+          +icon("offer", 430, 428)
+        .offer__content.flex__content
+          h2.title Unlimited calling, texting and picture messaging
+          p.text Quaerat sodales sapien euismod blandit at vitae ipsum primis undo and cubilia laoreet augue and luctus magna dolor luctus at egestas sapien vitae nemo egestas
+          button.offer__button.btn.btn--colored let&rsquo;s Get Started
+          button.offer__button.btn.btn--bordered View offer
+          p.addition
+            span Free 30 days trial
+            span.addition__decor |
+            span Exclusive Support
+            span.addition__decor |
+            span No Fees
+          .app-btns
+            a.app-btns__link.btn(href='#')
+              +img('content', 'appStore-white', 'png', 131, 41)
+            a.app-btns__link.btn(href='#')
+              +img('content', 'googlePlay-white', 'png', 131, 41)
+
+

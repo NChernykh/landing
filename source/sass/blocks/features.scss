@@ -1,0 +1,36 @@
+.features {
+
+  .text--main {
+    margin-bottom: 74px;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    align-items:initial;
+
+  }
+
+  &__item {
+    max-width: 363px;
+    width: 28%;
+
+    @include vp-767 {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 60px;
+
+    @include vp-1023 {
+      margin-right: 30px;
+    }
+
+    @include vp-767 {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

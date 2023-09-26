@@ -1,13 +1,97 @@
 .header {
-  padding: 28px 0;
+  z-index: 5;
+  padding-top: 35px;
 
-  background-color: $color-neon-blue;
+  @include vp-767 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-  .container {
+  &__wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include vp-1023 {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
-    color: $color-default-white;
+    margin-top: 5px;
+
+    @include vp-1023 {
+      margin-top: 0;
+    }
+  }
+
+  &.is-open {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    border-bottom: none;
+    background-color: $color-romance;
+
+    .main-nav__list {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-top: 60px;
+      width: 100%;
+      align-items:flex-start;
+    }
+
+    .main-nav__item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .main-nav__toggle {
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: $atomic-tangerine;
+        box-shadow: none;
+        top: 16px;
+        left: 1px;
+
+        @include vp-767 {
+          width: 28px;
+          height: 2px;
+          top: 10px;
+        }
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    @include vp-1023 {
+      .container {
+        height: 100%;
+      }
+
+      .header__wrapper {
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 30px;
+        overflow: scroll;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
   }
 }

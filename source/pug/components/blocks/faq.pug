@@ -1,0 +1,54 @@
+mixin faq(data)
+
+  -
+    const faqData = [
+      {
+        question: 'Can I see OLMO in action before purchasing?',
+        answer: 'Etiam amet mauris suscipit in odio integer congue metus vitae arcu mollis blandit ultrice ligula egestas and magna suscipit lectus magna suscipit luctus blandit vitae'
+      },
+      {
+        question: 'Can I see OLMO in action before purchasing?',
+        answer: 'Cubilia laoreet augue egestas and luctus donec curabite diam vitae dapibus libero and quisque gravida donec and neque. Blandit justo aliquam molestie nunc sapien'
+      },
+      {
+        question: 'Can I see OLMO in action before purchasing?',
+        answer: 'An enim nullam tempor sapien gravida a donec ipsum enim an porta justo integer at velna vitae auctor integer congue undo magna at pretium purus pretium'
+      },
+      {
+        question: 'Can I see OLMO in action before purchasing?',
+        answers: [
+          {text: 'Etiam amet mauris suscipit sit amet in odio. Integer congue leo metus. Vitae arcu mollis blandit ultrice ligula'},
+          {text: 'An enim nullam tempor sapien gravida donec congue leo metus. Vitae arcu mollis blandit integer at velna'}
+        ]
+      },
+      {
+        question: 'Can I see OLMO in action before purchasing?',
+        answers: [
+          {text: 'Fringilla risus, luctus mauris orci auctor purus ligula euismod pretium purus pretium rutrum tempor sapien'},
+          {text: 'Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales sapien undo pretium a purus'}
+        ]
+      },
+      {
+        question: 'Can I see OLMO in action before purchasing?',
+        answers: [
+          {text: 'Fringilla risus, luctus mauris orci auctor purus'},
+          {text: 'Quaerat sodales sapien euismod blandit purus and ipsum primis in cubilia laoreet augue luctus'}
+        ]
+      },
+    ];
+
+  section.faq.section(class!=attributes.class)
+    .container.container--sm
+      h2.title.title--main Got Questions? Look Here
+      p.text.text--main Aliquam a&nbsp;augue suscipit, luctus neque purus ipsum neque dolor primis a&nbsp;libero tempus, blandit and cursus varius and magnis sapien
+      ul.faq__list.flex
+        each item in faqData
+          li.faq__item
+            h3.title.title--sm= item.question
+            if(item.answer)
+              p.text= item.answer
+            if(item.answers)
+              each text in item.answers
+                p.text= text.text
+      h2.title.title--main Have more questions?
+      +search()

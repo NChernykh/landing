@@ -1,0 +1,10 @@
+.addition {
+    font-size: 12px;
+    line-height: 187%;
+    font-weight: bold;
+
+  &__decor {
+    color: $atomic-tangerine;
+    padding: 6px;
+  }
+}

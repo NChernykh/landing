@@ -13,10 +13,10 @@ body {
 
 html {
   font-style: normal;
-  font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: $ff-poppins;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -30,8 +30,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-
-  background-color: $color-default-white;
+  background-color: $color-bg;
 }
 
 a {
@@ -44,6 +43,12 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 textarea {

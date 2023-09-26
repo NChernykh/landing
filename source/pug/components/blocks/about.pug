@@ -1,0 +1,27 @@
+mixin about(data)
+
+  -
+    const aboutData = [
+      {
+        icon: 'icon-bulb',
+        title: 'Quick Access',
+        text: 'Feugiat primis ultrice a semper lacus cursus feugiat a primis ultrice a ligula risus auctor '
+      },
+      {
+        icon: 'icon-bulb',
+        title: 'Cross-Platform',
+        text: 'Feugiat primis ultrice a semper lacus cursus feugiat a primis ultrice a ligula risus auctor '
+      },
+      {
+        icon: 'icon-bulb',
+        title: 'Easy Integration',
+        text: 'Feugiat primis ultrice a semper lacus cursus feugiat a primis ultrice a ligula risus auctor '
+      },
+    ];
+
+  section.about.section(class!=attributes.class)
+    .container
+      ul.about__list.flex
+        each item in aboutData
+          li.about__item
+            +card(item)

@@ -1,0 +1,17 @@
+mixin get-app(data)
+  section.get-app.section(class!=attributes.class)
+    .container.container--sm
+      .get-app__wrapper.flex
+        .get-app__content.flex__content
+          h2.title No collection of user data. No Ads
+          p.text Aliqum mullam blandit tempor sapien gravida at donec ipsum porta justo. Velna vitae auctor and congue magna impedit luctus dolor volute
+          p.text Aliqum mullam blandit tempor sapien gravida at donec ipsum porta justo. Velna vitae auctor and congue magna impedit luctus dolor volute
+          p.text Aliqum mullam blandit tempor sapien gravida at donec ipsum porta justo. Velna vitae auctor and congue magna impedit luctus dolor volute
+          .app-btns
+            a.app-btns__link.btn(href='#')
+              +img('content', 'appStore', 'png', 131, 41)
+            a.app-btns__link.btn(href='#')
+              +img('content', 'googlePlay', 'png', 131, 41)
+        .get-app__img.flex__img
+          +picture("content", "get-app", "png", 488, 555, "price")
+

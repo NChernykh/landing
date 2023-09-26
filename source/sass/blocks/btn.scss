@@ -1,17 +1,41 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  align-items: center;
+  padding: 10px 35px;
+  font-weight: 700;
+  color: $color-default-black;
   border: none;
   cursor: pointer;
-
+  background-color: $color-transparent;
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  @include vp-1023 {
+    padding: 6px 20px;
+  }
+
+  &--bordered {
+    border: 3px solid $atomic-tangerine;
+    border-radius: 5px;
+  }
+
+  &--colored {
+    padding: 13px 35px;
+    color: $color-default-white;
+    background-color: $atomic-tangerine;
+    border-radius: 5px;
+
+    @include vp-1023 {
+      padding: 8px 20px;
+    }
+  }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+    }
   }
 
   &:disabled {
@@ -21,6 +45,6 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }

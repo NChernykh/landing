@@ -3,34 +3,65 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Home",
+        icon: true
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "About",
+        icon: true
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "About",
+        icon: true
+      },
+      {
+        href: "#",
+        text: "Auth Page",
+        icon: true
+      },
+      {
+        href: "#",
+        text: "Features"
+      },
+      {
+        href: "#",
+        text: "Pricing"
+      },
+      {
+        href: "#",
+        text: "Get Started",
+        button: true
       },
     ]
 
   header.header(class=headerMods)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+      .header__wrapper
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.header__logo
+            +icon("logo", 116, 40)
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную")
+            +icon("logo", 116, 40)
+        nav.main-nav
+          button.main-nav__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.main-nav__item
+                  if(link.icon)
+                    if(activeState)
+                      span.main-nav__link.is-active= link.text
+                        +icon("arrow-down", 6, 6)
+                    else
+                      a(class=link.button ? `btn btn--bordered` : 'main-nav__link', href=link.href)= link.text
+                        +icon("arrow-down", 6, 6)
+                  else
+                    if(activeState)
+                      span.main-nav__link.is-active= link.text
+                    else
+                      a(class=link.button ? `btn btn--bordered` : 'main-nav__link', href=link.href)= link.text
